@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sticky Bot</title>
+  </head>
+  <body>
+    <h1>Lista de sticker disponible</h1>
+    <ul>
+      {% for sticker in stickers %}
+        <li>
+          <h3>{{ sticker.file_id }}</h3>
+          <img src="{{ sticker.file_path }}" alt="" />
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
