@@ -6,13 +6,19 @@
   </head>
   <body>
     <h1>Lista de sticker disponible</h1>
-    <ul>
-      {% for sticker in stickers %}
-        <li>
-          <h3>{{ sticker.file_id }}</h3>
-          <img src="{{ sticker.file_path }}" alt="" />
-        </li>
-      {% endfor %}
-    </ul>
+    <stickers> </stickers>
+
+    <script src="static/components/list_stickers.tag" type="riot/tag"></script>
+    <script src="https://cdn.jsdelivr.net/g/riot@2.2(riot.min.js+compiler.min.js)"></script>
+
+    <script>
+        items = [];
+        {% for sticker in stickers %}
+          items.push({ id: '{{ sticker.file_id }}', path: '{{ sticker.file_path}}' } );
+        {% endfor %}
+        riot.mount('stickers', {
+          items: items
+        });
+        </script>
   </body>
 </html>
