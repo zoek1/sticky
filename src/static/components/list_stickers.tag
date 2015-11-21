@@ -14,17 +14,27 @@
 
   li {
     display: inline-block;
-    max-width: 400px;
+    max-width: 200px;
     margin: 5% auto;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 20px;
+    margin-left: 20px;
   }
 
   label {
     text-decoration: none;
     list-style-type: none;
+    font-size: 12px;
   }
 
   img {
-    width: 30%;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   </style>
 
